@@ -19,9 +19,11 @@ func setupRoutes(app *fiber.App) {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	if os.Getenv("APP_ENV") != "production" {
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatal("Error loading .env file")
+		}
 	}
 
 	app := fiber.New()
@@ -34,7 +36,7 @@ func main() {
 	setupRoutes(app)
 
 	port := os.Getenv("PORT")
-	err = app.Listen(":" + port)
+	err := app.Listen(":" + port)
 
 	if err != nil {
 		log.Fatal("Error app failed to start")
