@@ -1,1 +1,1 @@
-web: go run main.go
+web: bin/catchphrase-go-mongodb-rest-api
