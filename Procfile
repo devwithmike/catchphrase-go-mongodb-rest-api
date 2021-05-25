@@ -1,1 +1,1 @@
-web: catchphrase-go-mongodb-rest-api
+web: go run main.go
