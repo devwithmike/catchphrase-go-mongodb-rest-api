@@ -83,6 +83,7 @@ func GetAllCatchphrases(c *fiber.Ctx) error {
 		"total":     total,
 		"page":      page,
 		"last_page": last,
+		"limit":     limit,
 	})
 }
 

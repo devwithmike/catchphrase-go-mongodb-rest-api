@@ -13,6 +13,14 @@ import (
 )
 
 func setupRoutes(app *fiber.App) {
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.Status(fiber.StatusOK).JSON(fiber.Map{
+			"success":     true,
+			"message":     "You are at the root endpoint 😉",
+			"github_repo": "https://github.com/MikeFMeyer/catchphrase-go-mongodb-rest-api",
+		})
+	})
+
 	api := app.Group("/api")
 
 	routes.CatchphrasesRoute(api.Group("/catchphrases"))
