@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -32,7 +33,8 @@ func main() {
 
 	setupRoutes(app)
 
-	err = app.Listen(":8000")
+	port := os.Getenv("PORT")
+	err = app.Listen(":" + port)
 
 	if err != nil {
 		log.Fatal("Error app failed to start")
