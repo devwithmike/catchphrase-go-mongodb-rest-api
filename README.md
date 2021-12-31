@@ -6,11 +6,7 @@ An API built with Fiber and MongoDB.
 Tutorial available at: [dev.to](https://dev.to/mikefmeyer/build-a-go-rest-api-with-fiber-and-mongodb-44og)
 
 
-## API Reference
-
-```http
-https://fiber-mongodb-rest-api.herokuapp.com/api/catchphrases
-```
+## API Usage
 
 #### Get all catchphrases
 
@@ -85,8 +81,6 @@ https://fiber-mongodb-rest-api.herokuapp.com/api/catchphrases
 
 
 ## Links
-
-[Demo](https://fiber-mongodb-rest-api.herokuapp.com/api/catchphrases)
 
 [Tutorial](https://dev.to/mikefmeyer/build-a-go-rest-api-with-fiber-and-mongodb-44og)
 
